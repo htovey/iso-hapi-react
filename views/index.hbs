@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React Boilerplate</title>
+  </head>
+  <body>
+    <div id="react-app">{{{ app }}}</div>
+
+    <script src="/js/bundle.min.js"></script>
+    <script>
+      var React = require('react'),
+          TodoApp = React.createFactory(require('./app/TodoApp'));
+
+      React.render(new TodoApp({{{ json props }}}), document.getElementById('react-app'));
+    </script>
+  </body>
+</html>
